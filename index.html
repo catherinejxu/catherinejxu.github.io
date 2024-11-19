@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catherine Xu</title>
+    <title>Catherine Xu - Reviews & Travel</title>
     <style>
-        /* General Reset */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
             background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
 
         h1, h2, p {
             margin: 0;
         }
 
-        /* Header Styling */
         header {
             text-align: center;
             padding: 60px 20px;
@@ -28,134 +26,66 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #222;
         }
 
-        header p {
-            margin-top: 15px;
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        /* Navigation Styling */
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-            gap: 20px;
-        }
-
-        .nav-buttons button {
-            padding: 12px 25px;
-            font-size: 1rem;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.3s;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-buttons button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-
-        /* Content Section Styling */
-        .tab-content {
-            display: none;
+        .reviews-section {
             max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 40px auto;
+            padding: 20px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .tab-content h2 {
+        .review {
+            margin-bottom: 40px;
+        }
+
+        .review h2 {
             font-size: 2rem;
-            margin-bottom: 20px;
             color: #007BFF;
         }
 
-        .tab-content p {
+        .review p {
             font-size: 1.1rem;
             color: #555;
-            line-height: 1.8;
+            margin-top: 10px;
         }
 
-        .active {
+        .review img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .back-link {
             display: block;
-        }
-
-        /* Footer Styling */
-        footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #ffffff;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            color: #888;
-        }
-
-        footer a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Catherine Xu</h1>
-        <p>Hi👋 I'm Catherine, a USC student passionate about business and public policy.</p>
+        <h1>Reviews & Travel</h1>
+        <p>My thoughts on restaurants, travel spots, and lessons from adventures.</p>
     </header>
 
-    <!-- Navigation Buttons -->
-    <div class="nav-buttons">
-        <button onclick="showTab('about')">About Me</button>
-        <button onclick="showTab('experience')">Experience</button>
-        <button onclick="showTab('projects')">Projects</button>
-        <button onclick="showTab('contact')">Contact</button>
+    <div class="reviews-section">
+        <div class="review">
+            <h2>Restaurant Review: Name</h2>
+            <p>A detailed review of the restaurant, including highlights and recommendations.</p>
+            <img src="restaurant.jpg" alt="Restaurant">
+        </div>
+        <div class="review">
+            <h2>Travel Spot: Destination Name</h2>
+            <p>Overview of the destination with lessons learned and personal insights.</p>
+            <img src="travel.jpg" alt="Travel Spot">
+        </div>
     </div>
 
-    <!-- Content Sections -->
-    <div id="about" class="tab-content">
-        <h2>About Me</h2>
-        <p>Hi, I'm Catherine. I'm passionate about environmental advocacy, social entrepreneurship, and policy work. In my free time, I like to garden, hike, run, read, travel, and side quest.</p>
-    </div>
-
-    <div id="experience" class="tab-content">
-        <h2>Experience</h2>
-        <p>I have experience in education policy and environmental advocacy. I've worked with organizations like the California Association of Student Councils (CASC) and the Thousand Oaks Youth Commission, leading policy initiatives and drafting bills impacting California's youth.</p>
-    </div>
-
-    <div id="projects" class="tab-content">
-        <h2>Projects</h2>
-        <p>I work on various projects related to racial equity, sustainability, and youth empowerment. My latest project focuses on integrating sustainability education into school curriculums and advancing environmental policy.</p>
-    </div>
-
-    <div id="contact" class="tab-content">
-        <h2>Contact</h2>
-        <p>You can reach me via email or follow me on social media to stay updated on my work. Let's connect!</p>
-    </div>
-
-    <script>
-        // Function to display the corresponding tab content
-        function showTab(tabName) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-        }
-
-        // Default tab
-        showTab('about');
-    </script>
+    <a class="back-link" href="index.html">← Back to Home</a>
 </body>
 </html>
