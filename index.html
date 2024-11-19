@@ -5,77 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catherine Xu</title>
     <style>
-        /* Basic reset */
-        body, h1, h2, p {
+        /* General Reset */
+        body {
             margin: 0;
             padding: 0;
-            font-family: Open San, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
         }
 
-        /* Container for the navigation buttons */
+        h1, h2, p {
+            margin: 0;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #222;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Navigation Styling */
         .nav-buttons {
             display: flex;
             justify-content: center;
+            margin: 30px 0;
             gap: 20px;
-            margin-top: 20px;
         }
 
         .nav-buttons button {
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 12px 25px;
+            font-size: 1rem;
             background-color: #007BFF;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
         .nav-buttons button:hover {
             background-color: #0056b3;
+            transform: translateY(-3px);
         }
 
-        /* Hide all content sections by default */
+        /* Content Section Styling */
         .tab-content {
             display: none;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Show the active tab content */
+        .tab-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .tab-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
         .active {
             display: block;
         }
 
-        /* Style for the content sections */
-        .section {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #333;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Optional: Style the header */
-        header {
+        /* Footer Styling */
+        footer {
             text-align: center;
-            margin-bottom: 40px;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            color: #888;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <h1>Catherine Xu</h1>
-        <p>Hi👋 I'm Catherine! I'm an student at USC studying Business and Public Policy.</p>
+        <p>Hi👋 I'm Catherine, a USC student passionate about business and public policy.</p>
     </header>
 
     <!-- Navigation Buttons -->
@@ -86,42 +125,41 @@
         <button onclick="showTab('contact')">Contact</button>
     </div>
 
-    <!-- Content Sections (Tabs) -->
-    <div id="about" class="tab-content section">
+    <!-- Content Sections -->
+    <div id="about" class="tab-content">
         <h2>About Me</h2>
         <p>Hi, I'm Catherine. I'm passionate about environmental advocacy, social entrepreneurship, and policy work. In my free time, I like to garden, hike, run, read, travel, and side quest.</p>
     </div>
 
-    <div id="experience" class="tab-content section">
+    <div id="experience" class="tab-content">
         <h2>Experience</h2>
-        <p>I have experience in education policy and environmental advocacy. I've worked with organizations like the California Association of Student Councils (CASC) and the Thousand Oaks Youth Commission, among others to lead policy initatives and help write bills affecting California's youth.</p>
+        <p>I have experience in education policy and environmental advocacy. I've worked with organizations like the California Association of Student Councils (CASC) and the Thousand Oaks Youth Commission, leading policy initiatives and drafting bills impacting California's youth.</p>
     </div>
 
-    <div id="projects" class="tab-content section">
+    <div id="projects" class="tab-content">
         <h2>Projects</h2>
         <p>I work on various projects related to racial equity, sustainability, and youth empowerment. My latest project focuses on integrating sustainability education into school curriculums and advancing environmental policy.</p>
     </div>
 
-    <div id="contact" class="tab-content section">
+    <div id="contact" class="tab-content">
         <h2>Contact</h2>
-        <p>You can reach me through email or follow me on social media to stay updated on my work and projects. Feel free to get in touch!</p>
+        <p>You can reach me via email or follow me on social media to stay updated on my work. Let's connect!</p>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Catherine Xu | Built with <a href="https://rana.land/" target="_blank">Inspiration</a></p>
+    </footer>
 
     <script>
         // Function to display the corresponding tab content
         function showTab(tabName) {
-            // Hide all tabs
             var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-
-            // Show the clicked tab
-            var activeTab = document.getElementById(tabName);
-            activeTab.classList.add('active');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
         }
 
-        // Show the 'About Me' tab by default
+        // Default tab
         showTab('about');
     </script>
 </body>
