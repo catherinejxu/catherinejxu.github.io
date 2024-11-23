@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catherine Xu - Writings</title>
+    <title>Catherine Xu</title>
     <style>
         /* General Reset */
         body, h1, h2, p, a, button {
@@ -16,6 +16,7 @@
         body {
             line-height: 1.6;
             background-color: #f9f9f9;
+            font-size: 16px;
         }
 
         a {
@@ -48,7 +49,8 @@
         }
 
         .sidebar h1 {
-            font-size: 1.5em;
+            font-size: 1.8em;
+            color: #007BFF;
             margin-bottom: 20px;
         }
 
@@ -61,14 +63,21 @@
         }
 
         .nav li a {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #007BFF;
+        }
+
+        .nav li a:hover {
+            color: #0056b3;
         }
 
         /* Main Content */
         .content {
             flex: 1;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         section {
@@ -80,18 +89,21 @@
         }
 
         h2 {
-            font-size: 1.8em;
+            font-size: 2em;
+            color: #333;
             margin-bottom: 20px;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 1.1em;
             color: #555;
         }
 
-        .writing {
-            margin-bottom: 30px;
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
         }
 
         .writing-summary {
@@ -115,7 +127,6 @@
             font-size: 1em;
             padding: 0;
             margin-top: 10px;
-            transition: color 0.3s;
         }
 
         button.toggle:hover {
@@ -133,6 +144,10 @@
 
         footer a {
             color: #007BFF;
+        }
+
+        footer a:hover {
+            color: #0056b3;
         }
     </style>
 </head>
@@ -159,6 +174,51 @@
                 <p>
                     Hi, I’m Catherine Xu. I am passionate about sustainability, entrepreneurship, and policy advocacy. 
                     My work spans multiple fields, from environmental initiatives to student empowerment and impactful public policy. 
+                </p>
+                <p>
+                    Today, I am a student at USC, double majoring in Business Administration (Finance) and Public Policy, with a minor in Computer Programming.
+                </p>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Born and raised in Thousand Oaks, California, I’ve always been deeply involved in my community. 
+                    From playing varsity sports to leading policy initiatives, my journey has been one of learning, growth, and impact.
+                </p>
+                <p>
+                    Professionally, I’ve worked in private equity, finance, and startups. 
+                    I thrive on creating meaningful change and empowering others to use their voices effectively.
+                </p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>
+                    I’ve led initiatives in private equity, startups, and sustainability:
+                </p>
+                <ul>
+                    <li><b>Finance & Startups:</b> Built investment theses for healthcare companies at Kinesis Growth Partners and founded Optipin.</li>
+                    <li><b>Menstrual Equity:</b> Co-led the legislative strategy for California’s AB 367, ensuring free menstrual products in schools.</li>
+                    <li><b>Sustainability Education:</b> Developed curriculums for climate action and environmental awareness in schools.</li>
+                </ul>
+            </section>
+
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Read my latest posts on Medium:</p>
+                <ul>
+                    <li><a href="https://medium.com/@catherinejxu" target="_blank">View all my posts on Medium</a></li>
+                </ul>
+            </section>
+
+            <section id="reviews">
+                <h2>Travel & Reviews</h2>
+                <p>
+                    I enjoy exploring new places and discovering amazing food. My travel stories are filled with lessons, memories, and recommendations. 
+                </p>
+                <p>
+                    Stay tuned for reviews of my favorite spots and hidden gems!
                 </p>
             </section>
 
@@ -233,4 +293,3 @@
     </script>
 </body>
 </html>
-
