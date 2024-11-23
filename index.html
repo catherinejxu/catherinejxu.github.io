@@ -15,8 +15,8 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #fff;
-            background-color: #121212;
+            color: #333;
+            background-color: #f9f9f9;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
@@ -27,80 +27,80 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px 0;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            justify-content: center;
+            gap: 20px;
         }
 
         nav ul li {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
-            transition: color 0.3s;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #00ADB5;
+            background-color: #e4f0fb;
+            color: #007BFF;
         }
 
         /* Section Styles */
         section {
-            height: 100vh;
+            padding: 80px 20px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
             text-align: center;
         }
 
         section h1, section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #00ADB5;
+            color: #007BFF;
         }
 
         section p {
             font-size: 1.2rem;
-            color: #bbb;
+            color: #555;
             max-width: 700px;
-            margin: 0 auto;
         }
 
         section a {
             margin-top: 20px;
-            display: inline-block;
             text-decoration: none;
-            color: #00ADB5;
-            border: 1px solid #00ADB5;
+            color: #007BFF;
+            border: 1px solid #007BFF;
             padding: 10px 20px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
 
         section a:hover {
-            background-color: #00ADB5;
-            color: #121212;
+            background-color: #007BFF;
+            color: #fff;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
+            background-color: #fff;
             text-align: center;
             padding: 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
@@ -109,7 +109,7 @@
         }
 
         footer a {
-            color: #00ADB5;
+            color: #007BFF;
             text-decoration: none;
         }
 
@@ -133,41 +133,31 @@
 
     <!-- Sections -->
     <section id="home">
-        <h1>Welcome to My World</h1>
+        <h1>Catherine Xu</h1>
         <p>
-            Hi, I'm Catherine Xu. Dive into my thoughts, projects, and adventures. 
-            I strive to make an impact in sustainability, entrepreneurship, and advocacy.
+            Welcome to my website! I’m passionate about sustainability, entrepreneurship, and advocacy. Dive into my projects, blog, and adventures.
         </p>
-        <a href="#about">Learn More</a>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I'm passionate about social and environmental justice, blending policy with action. 
-            When I'm not working on my projects, I enjoy running, hiking, and trying new cuisines.
+            I’m a student at USC studying Business and Public Policy. I love working on initiatives that bring about real-world change, from environmental advocacy to social impact projects.
         </p>
-        <a href="#projects">See My Work</a>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <p>
-            From sustainability education to policy advocacy, my projects are centered on creating a better future.
-            <br>Key highlights include:
+            My work spans sustainability education, policy advocacy, and empowering communities. Check out some of my key projects below:
         </p>
-        <ul>
-            <li>Advocating racial equity in education</li>
-            <li>Promoting sustainability in local policies</li>
-            <li>Engaging youth in impactful initiatives</li>
-        </ul>
         <a href="#blog">Read My Blog</a>
     </section>
 
     <section id="blog">
         <h2>Blog</h2>
         <p>
-            Explore my latest thoughts on topics like mindful productivity, embracing change, and finding balance.
+            Explore my thoughts on topics like climate change, productivity, and personal growth. Writing is my way of reflecting and sharing insights.
         </p>
         <a href="#travel">Discover My Adventures</a>
     </section>
@@ -175,16 +165,16 @@
     <section id="travel">
         <h2>Travel & Reviews</h2>
         <p>
-            I love exploring new places and cuisines. 
-            Check out my favorite spots and lessons learned from my travels!
+            I love exploring new places and cuisines. From bustling cities to serene landscapes, my travel section features lessons learned and photo highlights.
         </p>
         <a href="#home">Back to Home</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Catherine Xu | Built with passion</p>
+        <p>&copy; 2024 Catherine Xu | Made with care</p>
     </footer>
 
 </body>
 </html>
+
