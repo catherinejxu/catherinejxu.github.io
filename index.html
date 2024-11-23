@@ -6,175 +6,212 @@
     <title>Catherine Xu</title>
     <style>
         /* General Reset */
-        * {
+        body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            color: #333;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
             background-color: #f9f9f9;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
         }
 
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav ul li {
-            font-size: 1rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #e4f0fb;
-            color: #007BFF;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 80px 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        section h1, section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #007BFF;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 700px;
-        }
-
-        section a {
-            margin-top: 20px;
+        a {
             text-decoration: none;
             color: #007BFF;
-            border: 1px solid #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: color 0.3s;
         }
 
-        section a:hover {
-            background-color: #007BFF;
-            color: #fff;
+        a:hover {
+            color: #0056b3;
         }
 
-        /* Footer */
-        footer {
+        /* Layout */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            padding: 20px;
             background-color: #fff;
+            border-right: 1px solid #ddd;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar h1 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            margin-bottom: 15px;
+        }
+
+        .nav li a {
+            font-size: 1em;
+            color: #007BFF;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .medium-posts {
+            list-style: none;
+            padding: 0;
+        }
+
+        .medium-posts li {
+            margin-bottom: 10px;
+        }
+
+        .medium-posts li a {
+            font-size: 1.1em;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
             text-align: center;
             padding: 20px;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            color: #777;
-            font-size: 0.9rem;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
         }
 
         footer a {
             color: #007BFF;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h1>Catherine Xu</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#reviews">Travel & Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#travel">Travel</a></li>
-        </ul>
-    </nav>
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Home Section -->
+            <section id="home">
+                <h2>Welcome</h2>
+                <p>
+                    Hi, I’m Catherine Xu. I am passionate about sustainability, entrepreneurship, and policy advocacy. 
+                    My work spans multiple fields, from environmental initiatives to student empowerment and impactful public policy. 
+                </p>
+                <p>
+                    Today, I am a student at USC, double majoring in Business Administration (Finance) and Public Policy, with a minor in Computer Programming.
+                </p>
+            </section>
 
-    <!-- Sections -->
-    <section id="home">
-        <h1>Catherine Xu</h1>
-        <p>
-            Welcome to my website! I’m passionate about sustainability, entrepreneurship, and advocacy. Dive into my projects, blog, and adventures.
-        </p>
-    </section>
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Born and raised in Thousand Oaks, California, I’ve always been deeply involved in my community. 
+                    From playing varsity sports to leading policy initiatives, my journey has been one of learning, growth, and impact.
+                </p>
+                <p>
+                    Some highlights include securing state funding for menstrual equity legislation, chairing environmental campaigns, and representing over 18,000 students as a School Board Student Trustee.
+                </p>
+                <p>
+                    I thrive on creating meaningful change and empowering others to use their voices effectively.
+                </p>
+            </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I’m a student at USC studying Business and Public Policy. I love working on initiatives that bring about real-world change, from environmental advocacy to social impact projects.
-        </p>
-    </section>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>
+                    Over the years, I’ve led and contributed to a variety of projects:
+                </p>
+                <ul>
+                    <li><b>Sustainability Education:</b> Developed curriculums for climate action and environmental awareness in schools.</li>
+                    <li><b>Menstrual Equity:</b> Co-led the legislative strategy for California’s AB 367, ensuring free menstrual products in public schools and universities.</li>
+                    <li><b>Racial Equity:</b> Drafted policies promoting diverse representation in educational materials and practices.</li>
+                </ul>
+                <p>
+                    I continue to work on projects that bring together policy, technology, and community impact.
+                </p>
+            </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            My work spans sustainability education, policy advocacy, and empowering communities. Check out some of my key projects below:
-        </p>
-        <a href="#blog">Read My Blog</a>
-    </section>
+            <!-- Blog Section -->
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Read my latest posts on Medium:</p>
+                <ul class="medium-posts">
+                    <li><a href="https://medium.com/@catherinejxu" target="_blank">View all my posts on Medium</a></li>
+                </ul>
+            </section>
 
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>
-            Explore my thoughts on topics like climate change, productivity, and personal growth. Writing is my way of reflecting and sharing insights.
-        </p>
-        <a href="#travel">Discover My Adventures</a>
-    </section>
+            <!-- Travel & Reviews Section -->
+            <section id="reviews">
+                <h2>Travel & Reviews</h2>
+                <p>
+                    I enjoy exploring new places and discovering amazing food. My travel stories are filled with lessons, memories, and recommendations. 
+                </p>
+                <img src="travel-photo.jpg" alt="A scenic travel destination">
+                <p>
+                    Stay tuned for reviews of my favorite spots and hidden gems!
+                </p>
+            </section>
 
-    <section id="travel">
-        <h2>Travel & Reviews</h2>
-        <p>
-            I love exploring new places and cuisines. From bustling cities to serene landscapes, my travel section features lessons learned and photo highlights.
-        </p>
-        <a href="#home">Back to Home</a>
-    </section>
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    I’d love to connect! You can reach me at <a href="mailto:xucather@usc.edu">xucather@usc.edu</a> or find me on <a href="https://linkedin.com/in/catherinexu1" target="_blank">LinkedIn</a>.
+                </p>
+            </section>
+        </div>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Catherine Xu | Made with care</p>
+        <p>&copy; 2024 Catherine Xu | Made with passion for impact</p>
     </footer>
-
 </body>
 </html>
-
