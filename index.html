@@ -6,7 +6,7 @@
     <title>Catherine Xu</title>
     <style>
         /* General Reset */
-        body, h1, h2, h3, p, a {
+        body, h1, h2, p, a {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
@@ -72,7 +72,11 @@
         }
 
         section {
-            margin-bottom: 40px;
+            display: none; /* Hide all sections by default */
+        }
+
+        section.active {
+            display: block; /* Show only the active section */
         }
 
         h2 {
@@ -84,25 +88,6 @@
             margin-bottom: 15px;
             font-size: 1.1em;
             color: #555;
-        }
-
-        .medium-posts {
-            list-style: none;
-            padding: 0;
-        }
-
-        .medium-posts li {
-            margin-bottom: 10px;
-        }
-
-        .medium-posts li a {
-            font-size: 1.1em;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
         }
 
         footer {
@@ -125,19 +110,18 @@
         <aside class="sidebar">
             <h1>Catherine Xu</h1>
             <ul class="nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#reviews">Travel & Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
+                <li><a href="#reviews" onclick="showSection('reviews')">Travel & Reviews</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </aside>
 
         <!-- Main Content -->
         <div class="content">
-            <!-- Home Section -->
-            <section id="home">
+            <section id="home" class="active">
                 <h2>Welcome</h2>
                 <p>
                     Hi, I’m Catherine Xu. I am passionate about sustainability, entrepreneurship, and policy advocacy. 
@@ -148,7 +132,6 @@
                 </p>
             </section>
 
-            <!-- About Section -->
             <section id="about">
                 <h2>About Me</h2>
                 <p>
@@ -156,51 +139,48 @@
                     From playing varsity sports to leading policy initiatives, my journey has been one of learning, growth, and impact.
                 </p>
                 <p>
-                    Some highlights include securing state funding for menstrual equity legislation, chairing environmental campaigns, and representing over 18,000 students as a School Board Student Trustee.
+                    Professionally, I’ve worked in private equity, finance, and startups. 
+                    As the founder of Optipin, I helped businesses identify optimal locations using ArcGIS, 
+                    and as a summer analyst at Hunter Point Capital, I evaluated deals worth $730M+ in TEV.
                 </p>
                 <p>
                     I thrive on creating meaningful change and empowering others to use their voices effectively.
                 </p>
             </section>
 
-            <!-- Projects Section -->
             <section id="projects">
                 <h2>Projects</h2>
                 <p>
                     Over the years, I’ve led and contributed to a variety of projects:
                 </p>
                 <ul>
+                    <li><b>Finance & Startups:</b> Built investment theses for healthcare companies at Kinesis Growth Partners, and forecasted financial statements at Work From Home Studio.</li>
                     <li><b>Sustainability Education:</b> Developed curriculums for climate action and environmental awareness in schools.</li>
                     <li><b>Menstrual Equity:</b> Co-led the legislative strategy for California’s AB 367, ensuring free menstrual products in public schools and universities.</li>
-                    <li><b>Racial Equity:</b> Drafted policies promoting diverse representation in educational materials and practices.</li>
                 </ul>
                 <p>
                     I continue to work on projects that bring together policy, technology, and community impact.
                 </p>
             </section>
 
-            <!-- Blog Section -->
             <section id="blog">
                 <h2>Blog</h2>
                 <p>Read my latest posts on Medium:</p>
-                <ul class="medium-posts">
+                <ul>
                     <li><a href="https://medium.com/@catherinejxu" target="_blank">View all my posts on Medium</a></li>
                 </ul>
             </section>
 
-            <!-- Travel & Reviews Section -->
             <section id="reviews">
                 <h2>Travel & Reviews</h2>
                 <p>
                     I enjoy exploring new places and discovering amazing food. My travel stories are filled with lessons, memories, and recommendations. 
                 </p>
-                <img src="travel-photo.jpg" alt="A scenic travel destination">
                 <p>
                     Stay tuned for reviews of my favorite spots and hidden gems!
                 </p>
             </section>
 
-            <!-- Contact Section -->
             <section id="contact">
                 <h2>Contact</h2>
                 <p>
@@ -213,5 +193,16 @@
     <footer>
         <p>&copy; 2024 Catherine Xu | Made with passion for impact</p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
+
