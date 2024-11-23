@@ -6,117 +6,110 @@
     <title>Catherine Xu</title>
     <style>
         /* General Reset */
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            background-color: #f8f9fa;
-            color: #333;
+            color: #fff;
+            background-color: #121212;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
-        /* Header Styling */
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #222;
-        }
-
-        header p {
-            margin-top: 15px;
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        /* Sidebar Navigation */
-        .sidebar {
+        /* Navigation Bar */
+        nav {
             position: fixed;
             top: 0;
             left: 0;
-            width: 200px;
-            height: 100%;
-            background-color: #ffffff;
-            border-right: 1px solid #ddd;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .sidebar h2 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #444;
-        }
-
-        .sidebar button {
-            display: block;
             width: 100%;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            background: none;
-            border: none;
-            text-align: left;
-            color: #007bff;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            font-size: 1.1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ADB5;
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h1, section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00ADB5;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #bbb;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        section a {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #00ADB5;
+            border: 1px solid #00ADB5;
+            padding: 10px 20px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
-            cursor: pointer;
         }
 
-        .sidebar button:hover, .sidebar button.active {
-            background-color: #007bff;
-            color: #fff;
+        section a:hover {
+            background-color: #00ADB5;
+            color: #121212;
         }
 
-        /* Main Content Area */
-        .main-content {
-            margin-left: 220px;
-            padding: 40px;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Section Styling */
-        h2 {
-            font-size: 2rem;
-            color: #222;
-        }
-
-        p, ul {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Footer Styling */
+        /* Footer */
         footer {
+            background-color: #000;
             text-align: center;
             padding: 20px;
-            background-color: #ffffff;
-            border-top: 1px solid #ddd;
-            color: #666;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 0.9rem;
         }
 
         footer a {
-            color: #007bff;
+            color: #00ADB5;
             text-decoration: none;
         }
 
@@ -126,89 +119,72 @@
     </style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <h2>Navigation</h2>
-        <button onclick="showTab('home')" id="btn-home" class="active">Home</button>
-        <button onclick="showTab('about')" id="btn-about">About</button>
-        <button onclick="showTab('projects')" id="btn-projects">Projects</button>
-        <button onclick="showTab('blog')" id="btn-blog">Blog</button>
-        <button onclick="showTab('reviews')" id="btn-reviews">Reviews & Travel</button>
-    </div>
 
-    <!-- Main Content Sections -->
-    <div class="main-content">
-        <!-- Home Section -->
-        <div id="home" class="tab-content active">
-            <header>
-                <h1>Catherine Xu</h1>
-                <p>Welcome to my personal space where I share my thoughts, adventures, and lessons.</p>
-            </header>
-            <p>This is the main content area where you can add an introduction or highlights.</p>
-        </div>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#travel">Travel</a></li>
+        </ul>
+    </nav>
 
-        <!-- About Section -->
-        <div id="about" class="tab-content">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Catherine. I'm passionate about environmental advocacy, social entrepreneurship, and policy work. 
-                In my free time, I enjoy gardening, hiking, running, reading, traveling, and exploring new challenges.
-            </p>
-        </div>
+    <!-- Sections -->
+    <section id="home">
+        <h1>Welcome to My World</h1>
+        <p>
+            Hi, I'm Catherine Xu. Dive into my thoughts, projects, and adventures. 
+            I strive to make an impact in sustainability, entrepreneurship, and advocacy.
+        </p>
+        <a href="#about">Learn More</a>
+    </section>
 
-        <!-- Projects Section -->
-        <div id="projects" class="tab-content">
-            <h2>Projects</h2>
-            <p>I work on various projects related to racial equity, sustainability, and youth empowerment. Here are some highlights:</p>
-            <ul>
-                <li><b>Sustainability Education:</b> Integrating sustainability education into school curriculums.</li>
-                <li><b>Policy Advocacy:</b> Drafting and advocating for bills on racial equity and environmental justice.</li>
-                <li><b>Youth Empowerment:</b> Leading initiatives to involve young people in impactful projects.</li>
-            </ul>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm passionate about social and environmental justice, blending policy with action. 
+            When I'm not working on my projects, I enjoy running, hiking, and trying new cuisines.
+        </p>
+        <a href="#projects">See My Work</a>
+    </section>
 
-        <!-- Blog Section -->
-        <div id="blog" class="tab-content">
-            <h2>Blog</h2>
-            <p>Welcome to my blog! Here are my latest writings and thoughts:</p>
-            <ul>
-                <li><b>Embracing Change:</b> How to make transitions smoother and more meaningful.</li>
-                <li><b>Finding Balance:</b> Tips for managing a busy life with intention.</li>
-                <li><b>Mindful Productivity:</b> How to get things done without burnout.</li>
-            </ul>
-        </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>
+            From sustainability education to policy advocacy, my projects are centered on creating a better future.
+            <br>Key highlights include:
+        </p>
+        <ul>
+            <li>Advocating racial equity in education</li>
+            <li>Promoting sustainability in local policies</li>
+            <li>Engaging youth in impactful initiatives</li>
+        </ul>
+        <a href="#blog">Read My Blog</a>
+    </section>
 
-        <!-- Reviews & Travel Section -->
-        <div id="reviews" class="tab-content">
-            <h2>Reviews & Travel</h2>
-            <p>Discover my recent experiences at restaurants, travel spots, and lessons learned along the way!</p>
-            <h3>Restaurant Reviews</h3>
-            <ul>
-                <li><b>Hillstone:</b> Amazing steak and great ambiance! Highly recommend.</li>
-                <li><b>Uovo:</b> Simple but delicious pasta in the heart of Santa Monica.</li>
-            </ul>
-            <h3>Travel Highlights</h3>
-            <p><b>Kyoto, Japan:</b> A serene escape with beautiful temples and the best matcha desserts.</p>
-            <p><b>Paris, France:</b> A dreamy city filled with art, history, and the best croissants.</p>
-        </div>
-    </div>
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>
+            Explore my latest thoughts on topics like mindful productivity, embracing change, and finding balance.
+        </p>
+        <a href="#travel">Discover My Adventures</a>
+    </section>
 
-    <!-- Footer Section -->
+    <section id="travel">
+        <h2>Travel & Reviews</h2>
+        <p>
+            I love exploring new places and cuisines. 
+            Check out my favorite spots and lessons learned from my travels!
+        </p>
+        <a href="#home">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Catherine Xu | <a href="#home" onclick="showTab('home')">Back to Home</a></p>
+        <p>&copy; 2024 Catherine Xu | Built with passion</p>
     </footer>
 
-    <!-- JavaScript for Tab Switching -->
-    <script>
-        function showTab(tabName) {
-            // Deactivate all tabs and buttons
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active'));
-
-            // Activate the selected tab and button
-            document.getElementById(tabName).classList.add('active');
-            document.getElementById('btn-' + tabName).classList.add('active');
-        }
-    </script>
 </body>
 </html>
