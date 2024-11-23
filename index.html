@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catherine Xu</title>
+    <title>Catherine Xu - Writings</title>
     <style>
         /* General Reset */
-        body, h1, h2, p, a {
+        body, h1, h2, p, a, button {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
@@ -90,6 +90,38 @@
             color: #555;
         }
 
+        .writing {
+            margin-bottom: 30px;
+        }
+
+        .writing-summary {
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .writing-content {
+            display: none;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        button.toggle {
+            display: inline-block;
+            background: none;
+            border: none;
+            color: #007BFF;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 0;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        button.toggle:hover {
+            color: #0056b3;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -115,6 +147,7 @@
                 <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
                 <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
                 <li><a href="#reviews" onclick="showSection('reviews')">Travel & Reviews</a></li>
+                <li><a href="#writings" onclick="showSection('writings')">Writings</a></li>
                 <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </aside>
@@ -127,65 +160,51 @@
                     Hi, I’m Catherine Xu. I am passionate about sustainability, entrepreneurship, and policy advocacy. 
                     My work spans multiple fields, from environmental initiatives to student empowerment and impactful public policy. 
                 </p>
-                <p>
-                    Today, I am a student at USC, double majoring in Business Administration (Finance) and Public Policy, with a minor in Computer Programming.
-                </p>
             </section>
 
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    Born and raised in Thousand Oaks, California, I’ve always been deeply involved in my community. 
-                    From playing varsity sports to leading policy initiatives, my journey has been one of learning, growth, and impact.
-                </p>
-                <p>
-                    Professionally, I’ve worked in private equity, finance, and startups. 
-                    As the founder of Optipin, I helped businesses identify optimal locations using ArcGIS, 
-                    and as a summer analyst at Hunter Point Capital, I evaluated deals worth $730M+ in TEV.
-                </p>
-                <p>
-                    I thrive on creating meaningful change and empowering others to use their voices effectively.
-                </p>
-            </section>
+            <section id="writings">
+                <h2>Writings</h2>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>
-                    Over the years, I’ve led and contributed to a variety of projects:
-                </p>
-                <ul>
-                    <li><b>Finance & Startups:</b> Built investment theses for healthcare companies at Kinesis Growth Partners, and forecasted financial statements at Work From Home Studio.</li>
-                    <li><b>Sustainability Education:</b> Developed curriculums for climate action and environmental awareness in schools.</li>
-                    <li><b>Menstrual Equity:</b> Co-led the legislative strategy for California’s AB 367, ensuring free menstrual products in public schools and universities.</li>
-                </ul>
-                <p>
-                    I continue to work on projects that bring together policy, technology, and community impact.
-                </p>
-            </section>
+                <!-- Writing Entry -->
+                <div class="writing">
+                    <h3>Grief and Gratitude</h3>
+                    <p class="writing-summary">“Even when your world feels like it’s falling apart, everything still moves on...”</p>
+                    <button class="toggle" onclick="toggleContent('writing1')">Read More</button>
+                    <p id="writing1" class="writing-content">
+                        Today was such a tough day for me. Hearing my grandpa out of breath as he spoke brought tears to my eyes. 
+                        I avoided calling for so long because I didn’t want to admit and accept that things are changing... [Full content here]
+                    </p>
+                </div>
 
-            <section id="blog">
-                <h2>Blog</h2>
-                <p>Read my latest posts on Medium:</p>
-                <ul>
-                    <li><a href="https://medium.com/@catherinejxu" target="_blank">View all my posts on Medium</a></li>
-                </ul>
-            </section>
+                <!-- Writing Entry -->
+                <div class="writing">
+                    <h3>The New York Experience</h3>
+                    <p class="writing-summary">“What does it mean to live in New York? I haven’t quite figured it out yet, but I’m on a quest to define it...”</p>
+                    <button class="toggle" onclick="toggleContent('writing2')">Read More</button>
+                    <p id="writing2" class="writing-content">
+                        Growing up in the suburbs, New York seemed like a dream. It was my American dream to work in finance in the Big Apple... [Full content here]
+                    </p>
+                </div>
 
-            <section id="reviews">
-                <h2>Travel & Reviews</h2>
-                <p>
-                    I enjoy exploring new places and discovering amazing food. My travel stories are filled with lessons, memories, and recommendations. 
-                </p>
-                <p>
-                    Stay tuned for reviews of my favorite spots and hidden gems!
-                </p>
-            </section>
+                <!-- Writing Entry -->
+                <div class="writing">
+                    <h3>Lessons from Warren Buffet</h3>
+                    <p class="writing-summary">“Warren Buffet has a cult-like following, but what I learned was beyond the hype...”</p>
+                    <button class="toggle" onclick="toggleContent('writing3')">Read More</button>
+                    <p id="writing3" class="writing-content">
+                        To be honest, I didn’t love Warren Buffet’s Shareholder Conference. I had high hopes... [Full content here]
+                    </p>
+                </div>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>
-                    I’d love to connect! You can reach me at <a href="mailto:xucather@usc.edu">xucather@usc.edu</a> or find me on <a href="https://linkedin.com/in/catherinexu1" target="_blank">LinkedIn</a>.
-                </p>
+                <!-- Writing Entry -->
+                <div class="writing">
+                    <h3>On Freedom</h3>
+                    <p class="writing-summary">“Are we truly free by taking freedom away from others? These are questions I reflect on...”</p>
+                    <button class="toggle" onclick="toggleContent('writing4')">Read More</button>
+                    <p id="writing4" class="writing-content">
+                        Since I was young, America has always prided itself on the ideals and foundation of freedom. But I’ve taken this freedom for granted... [Full content here]
+                    </p>
+                </div>
             </section>
         </div>
     </div>
@@ -201,6 +220,15 @@
 
             // Show the selected section
             document.getElementById(sectionId).classList.add('active');
+        }
+
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
         }
     </script>
 </body>
